@@ -1,0 +1,84 @@
+@import 'base';
+
+div.calculator {
+  width: 300px;
+  height: 450px;
+
+  background: var(--color-shape);
+  border: 2px solid var(--color-borders);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  div.displayCalculator {
+    width: 100%;
+    height: 80px;
+
+    border: 1px solid var(--color-shape-hover);
+
+    padding: 8px;
+
+    div.date-hours {
+      width: 100%;
+      height: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      p {
+        font-size: 15px;
+        font-weight: bold;
+        color: var(--color-orange);
+      }
+    }
+
+    div.display-numbers {
+      width: 100%;
+      height: calc(100% - 20px);
+
+      color: var(--color-orange);
+
+      h1 {
+        float: right;
+        font-size:37px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  div.buttonsCalculator {
+    width: 100%;
+    height: calc(100% - 80px);
+
+    padding-top: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(5, 50px);
+    gap: 10px;
+    justify-content: center;
+
+    button {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--color-white);
+
+      background: var(--color-background);
+      border: 1px solid var(--color-orange);
+      border-radius: 10px;
+
+      transition: .2s;
+      cursor: pointer;
+
+      &:hover {
+        background: var(--color-orange);
+      }
+    }
+
+    button.btn-adicao {
+      height: 110px;    
+    }
+  }
+}

@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: var(--color-background);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+:root {
+  --color-background: #121214;
+  --color-green: #04d361;
+  --color-red: #ce4a4a;
+  --color-orange: #ff7a29;
+  --color-yellow: #FFCD1E ;
+  --color-purple: #8257e6;
+  --color-secondary: #e1e1e6;
+  --color-text: #a8a8b3;
+  --color-support: #737380;
+  --color-shape: #202024;
+  --color-shape-hover: #29292e;
+  --color-icons: #41414d;
+  --color-borders: #323238;
+  --color-black: #09090a;
+  --color-white: #fff;
+  --color-scrollbar: #4d4d57;
+  --color-scrollbar-background: transparent;
+}
+
+div.calculator {
+  width: 300px;
+  height: 450px;
+  background: var(--color-shape);
+  border: 2px solid var(--color-borders);
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.calculator div.displayCalculator {
+  width: 100%;
+  height: 80px;
+  border: 1px solid var(--color-shape-hover);
+  padding: 8px;
+}
+
+div.calculator div.displayCalculator div.date-hours {
+  width: 100%;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.calculator div.displayCalculator div.date-hours p {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--color-orange);
+}
+
+div.calculator div.displayCalculator div.display-numbers {
+  width: 100%;
+  height: calc(100% - 20px);
+  color: var(--color-orange);
+}
+
+div.calculator div.displayCalculator div.display-numbers h1 {
+  float: right;
+  font-size: 37px;
+  padding-right: 10px;
+}
+
+div.calculator div.buttonsCalculator {
+  width: 100%;
+  height: calc(100% - 80px);
+  padding-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[4];
+      grid-template-columns: repeat(4, 50px);
+  -ms-grid-rows: (50px)[5];
+      grid-template-rows: repeat(5, 50px);
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.calculator div.buttonsCalculator button {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-white);
+  background: var(--color-background);
+  border: 1px solid var(--color-orange);
+  border-radius: 10px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+div.calculator div.buttonsCalculator button:hover {
+  background: var(--color-orange);
+}
+
+div.calculator div.buttonsCalculator button.btn-adicao {
+  height: 110px;
+}
+/*# sourceMappingURL=main.css.map */
