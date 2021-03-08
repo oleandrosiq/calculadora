@@ -17,6 +17,10 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 :root {
@@ -127,5 +131,19 @@ div.calculator div.buttonsCalculator button:hover {
 
 div.calculator div.buttonsCalculator button.btn-adicao {
   height: 110px;
+}
+
+footer {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
