@@ -79,9 +79,9 @@ const Calculator = {
 
     const calculate = handlers[operator]
 
-    if (calculate) {
+    if (calculate && this.numbers[1]) {
       const result = calculate(numberOne, numberTwo)
-      
+      console.log(this.numbers[1])
       DOM.clearAll();
       this.numbers.push(String(Math.floor(result)));
       display.innerHTML = Math.floor(result);
@@ -99,7 +99,6 @@ const DOM = {
   },
 
   pickUpKey(event) {
-    console.log(event.target.classList)
     const key = event.target.classList[0].split("btn-");
     key.splice(key[0], 1);
     const valueKey = key[0];
@@ -174,10 +173,12 @@ const DOM = {
   },
 
   clearEntry() {
-    Calculator.numbers.length = 1;
-    display.innerHTML = "";
-    display.innerHTML += Calculator.numbers;
-    display.innerHTML += Calculator.operator;
+    if (this.operator.length >= 1) {
+      Calculator.numbers.length = 1;
+      display.innerHTML = "";
+      display.innerHTML += Calculator.numbers;
+      display.innerHTML += Calculator.operator;
+    }
 
     console.log(Calculator.numbers);
   }
