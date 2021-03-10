@@ -13,7 +13,7 @@ const Calculator = {
     numberActive = this.numbers[0];
 
     if (Calculator.operator.length === 0 && this.sizeArrays.length <= 10) {
-      if (this.numbers.length === 0) {
+      if (this.numbers.length === 0 && number !== ".") {
         this.numbers.push(number);
         DOM.addToDisplay(number);
 
@@ -53,11 +53,15 @@ const Calculator = {
   },
 
   addOperator(operator) {
-    if (this.operator.length === 0 && this.sizeArrays.length <= 10) {
-      this.operator.push(operator);
-      this.sizeArrays.push(operator);
-      display.innerHTML = this.numbers[0] + this.operator[0];
+
+    if (this.numbers.length >= 1 && this.numbers[0] != ".") {
+      if (this.operator.length === 0 && this.sizeArrays.length <= 10 && this.numbers.length > 0) {
+        this.operator.push(operator);
+        this.sizeArrays.push(operator);
+        display.innerHTML = this.numbers[0] + this.operator[0];
+      }
     }
+
   },
 
   calc() {
